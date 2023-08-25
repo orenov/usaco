@@ -64,14 +64,15 @@ ll run(int pos, bool smaller, bool started, const string& x, ll r) {
 }
 
 int main() {
-    int T; cin >> T;
-    for (int qq = 1; qq <= T; ++qq) {
+    while (true) {
         ll l, r;
         cin >> l >> r;
+        if (l == -1 && r == -1) break;
         memset(dp, -1, sizeof(dp));
         ll cnt1 = run(0, false, false, to_string(r), r);
         memset(dp, -1, sizeof(dp));
         ll cnt2 = run(0, false, false, to_string(l-1), l-1);
         std::cout << cnt1 - cnt2 << '\n';
     }
+    return 0;
 }
