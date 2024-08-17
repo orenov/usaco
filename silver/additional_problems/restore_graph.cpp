@@ -4,6 +4,8 @@
 #include <queue>
 
 int main() {
+    std::ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     int n, k; std::cin >> n >> k;
     std::vector<std::vector<int>> a(n, std::vector<int>(2, 0));
     for (int i = 0; i < n; ++i) {
